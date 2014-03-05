@@ -3,8 +3,11 @@
 
 //Todo: SVN结合
 
-define('ERROR_PATTERN', '/responseFetch\((.*?), (-?\d+)\)/');  	//有且仅有一处 (error_code) ，不允许有其他子集
-define('ERROR_CODE_START', 1000); //错误代码起始值
+//错误代码正则 ，有且仅有一处 错误信息、错误码，不允许有其他子集
+define('ERROR_PATTERN', '/responseFetch\((.*?), (-?\d+)\)/'); 
+
+//错误代码起始值
+define('ERROR_CODE_START', 1000); 
 
 if( count($argv) > 1 )
 	$paths = array_slice($argv, 1);
